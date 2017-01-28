@@ -1,0 +1,60 @@
+
+ # Node.jsを学んで豊かな人生を！
+
+ ## HTTP クライアント (13問中7問目)
+
+  1つ目の引数として指定された URL に、 HTTP で GET を送信する
+  (※)アプリを書いてください。
+
+  そのリクエストに対するレスポンスを"data"イベントで受け取り、受け取った全て
+  の文字列を1つずつ改行で区切ってコンソールに書き出してください。
+
+  ※ これからは「GET リクエスト」と記述します。
+
+ ─────────────────────────────────────────────────────────────────────────────
+
+ ## ヒント
+
+  この例題のためには http の Node.js モジュールが必要です。
+
+  http モジュールのドキュメントは、このリンクをブラウザで見てください:
+
+  file:///Users/kmaru/.nvm/versions/node/v7.2.0/lib/node_modules/learnyounode/node_apidoc/http.html
+
+  http.get() という関数は簡単に GET
+  リクエストを送信するショートカットです。解決方法をシンプルするのに役に立つ
+  と思います。 http.get() の1つ目の引数は、GET リクエストの URL
+  です。2つ目はコールバック関数です。
+
+     http.get(url, callback)
+
+  http はよくあるイディオム  (error, result)
+  と違って以下のようなコールバック関数となっています：
+
+     function callback (response) { /* ... */ }
+
+  response のオブジェクトは Node.js の Stream です。Stream
+  はイベントを発行するオブジェクトと考えてよいです。 Stream
+  における大切な3つのイベントは： data 、 error と end です。
+  各イベント時にデータを受け取る為には、次のようにリスナを設定します。
+
+     response.on("data", function (data) { /* ... */ })
+
+  data
+  イベントは処理できるデータチャンク(※)が現れたときに発行されます。チャンク
+  のサイズはデータによって変わります。 ※ データの一部分。Stream
+  ではこれが断続的に提供されます。
+
+  http.get() の response の Stream オブジェクトには setEncoding()
+  という関数があります。 それを utf8 という値を使って呼ぶとデータイベントの
+  Buffer の代わりに文字列が渡ってきます。
+
+ ─────────────────────────────────────────────────────────────────────────────
+
+   » この説明をもう一度表示する: learnyounode print
+   » 作成したアプリをテスト環境で実行する: learnyounode run program.js
+   » 作成したアプリが正しいか検証する: learnyounode verify program.js
+   » 出力結果が見づらい場合には --no-color をつけてみてください:
+     learnyounode verify program.js --no-color
+   » ヘルプを表示する: learnyounode help
+

@@ -1,0 +1,51 @@
+
+ # Node.jsを学んで豊かな人生を！
+
+ ## 初めての非同期I/O！ (13問中4問目)
+
+  非同期処理
+  をするファイルシステムのメソッドを使ってファイルの改行数を出力するアプリを
+  書いてください。 cat file | wc -l と同じようなアプリです。
+
+  アプリの1つ目のコマンドライン引数は、そのファイルへのパスです。
+
+ ─────────────────────────────────────────────────────────────────────────────
+
+ # ヒント
+
+  解決方法は前回とほとんど一緒です。しかし今回は Node
+  に適した方法にする必要があります：非同期(Async) 。 fs.readFileSync()
+  ではなく fs.readFile()
+  を使います。返り値を受け取るのではなく、2つ目の引数であるコールバック関数
+  を使って値を受け取ってください。
+
+  コールバックについて勉強したい場合はこれを読んでください：
+  [https://github.com/maxogden/art-of-node#callbacks](https://github.com/max
+  ogden/art-of-node#callbacks)
+
+  習慣的として Node
+  のコールバック関数は、以下のように引数をとることに注意してください：
+
+     function callback (err, data) { /* ... */ }
+
+  1つ目の引数 err でエラーの判別を行うことができます。
+  エラーが発生しなければ err は null となり、2つ目の引数には Buffer
+  オブジェクトが入ります。
+
+  readFileSyncと同じようにファイルパスとコールバック引数の間に "utf8"
+  を入れてもいいです。その場合、 Buffer のかわりに String
+  が返るようになります。
+
+  fs モジュールのドキュメントはブラウザーでこのリンクを見てください:
+  file:///Users/kmaru/.nvm/versions/node/v7.2.0/lib/node_modules/learnyounod
+  e/node_apidoc/fs.html
+
+ ─────────────────────────────────────────────────────────────────────────────
+
+   » この説明をもう一度表示する: learnyounode print
+   » 作成したアプリをテスト環境で実行する: learnyounode run program.js
+   » 作成したアプリが正しいか検証する: learnyounode verify program.js
+   » 出力結果が見づらい場合には --no-color をつけてみてください:
+     learnyounode verify program.js --no-color
+   » ヘルプを表示する: learnyounode help
+

@@ -1,0 +1,120 @@
+
+# Node.jsを学んで豊かな人生を！
+
+## モジュラーにしましょう (13問中6問目)
+
+
+あなたの回答の評価結果（想定回答との比較結果）:
+
+                回答内容                                想定回答
+────────────────────────────────────────────────────────────────────────────────
+
+   "CHANGELOG.md"                      ==    "CHANGELOG.md"
+   "LICENCE.md"                        ==    "LICENCE.md"
+   "README.md"                         ==    "README.md"
+   ""                                  ==    ""
+
+────────────────────────────────────────────────────────────────────────────────
+
+ ✓
+
+ 回答内容は想定回答とマッチしました
+
+ ✓
+
+ 追加されたモジュールファイルは、ひとつの関数をエキスポートします。
+
+ ✓
+
+ 追加されたモジュールファイルは、 3
+ 個の引数を受け取る関数をエキスポートします。
+
+ ✓
+
+ 追加されたモジュールファイルは、エラーを適切に処理します。
+
+ ✓
+
+ 追加されたモジュールファイルは、コールバック引数を処理します。
+
+ ✓
+
+ 追加されたモジュールファイルは、コールバックに2つの引数を返却しました。
+
+ ✓
+
+ 追加されたモジュールファイルは、コールバックの2つめの引数として正しい引数
+ の数を返却しました。
+
+ ✓
+
+ ?exercises.MAKE IT MODULAR.pass.dont_use_dot ||
+ common.exercise.pass.dont_use_dot || pass.dont_use_dot?
+
+ ✓
+
+ 追加されたモジュールファイルは、コールバックの2つめの引数として正しい引数
+ の数を返却しました。
+
+ ✓
+
+ 追加されたモジュールファイルは、コールバックの2つめの引数として正しいファ
+ イルの一覧を返却しました。
+
+ # おめでとう！ 「モジュラーにしましょう」に対するあなたの回答は合格です！
+
+ これが正式な回答です（もしあなたの回答と比較してみたいならどうぞ）：
+
+─────────────────────────────────────────────────────────────────────────────
+ _/Users/kmaru/.nvm/versions/node/v7.2.0/lib/node_modules/learnyounode/exer
+ cises/make_it_modular/solution/solution.js_ :
+
+
+    var filterFn = require('./solution_filter.js')
+    var dir = process.argv[2]
+    var filterStr = process.argv[3]
+
+    filterFn(dir, filterStr, function (err, list) {
+      if (err) {
+        return console.error('There was an error:', err)
+      }
+
+      list.forEach(function (file) {
+        console.log(file)
+      })
+    })
+
+─────────────────────────────────────────────────────────────────────────────
+ _/Users/kmaru/.nvm/versions/node/v7.2.0/lib/node_modules/learnyounode/exer
+ cises/make_it_modular/solution/solution_filter.js_ :
+
+
+    var fs = require('fs')
+    var path = require('path')
+
+    module.exports = function (dir, filterStr, callback) {
+      fs.readdir(dir, function (err, list) {
+        if (err) {
+          return callback(err)
+        }
+
+        list = list.filter(function (file) {
+          return path.extname(file) === '.' + filterStr
+        })
+
+        callback(null, list)
+      })
+    }
+
+─────────────────────────────────────────────────────────────────────────────
+ なんとあなたは全問クリア済みです！すばらしい！
+
+─────────────────────────────────────────────────────────────────────────────
+
+  » この説明をもう一度表示する: learnyounode print
+  » 作成したアプリをテスト環境で実行する: learnyounode run program.js
+  » 作成したアプリが正しいか検証する: learnyounode verify program.js
+  » 出力結果が見づらい場合には --no-color をつけてみてください:
+    learnyounode verify program.js --no-color
+  » ヘルプを表示する: learnyounode help
+

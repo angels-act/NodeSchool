@@ -1,0 +1,61 @@
+
+# Node.jsを学んで豊かな人生を！
+
+## LSのフィルター (13問中5問目)
+
+
+あなたの回答の評価結果（想定回答との比較結果）:
+
+                回答内容                                想定回答
+────────────────────────────────────────────────────────────────────────────────
+
+   "CHANGELOG.md"                      ==    "CHANGELOG.md"
+   "LICENCE.md"                        ==    "LICENCE.md"
+   "README.md"                         ==    "README.md"
+   ""                                  ==    ""
+
+────────────────────────────────────────────────────────────────────────────────
+
+ ✓
+
+ 回答内容は想定回答とマッチしました
+
+ ✓
+
+ 非同期(asynchronous)メソッドが用いられています: fs.readdir()
+
+ # おめでとう！ 「LSのフィルター」に対するあなたの回答は合格です！
+
+ これが正式な回答です（もしあなたの回答と比較してみたいならどうぞ）：
+
+─────────────────────────────────────────────────────────────────────────────
+
+    var fs = require('fs')
+    var path = require('path')
+
+    var folder = process.argv[2]
+    var ext = '.' + process.argv[3]
+
+    fs.readdir(folder, function (err, files) {
+      if (err) return console.error(err)
+      files.forEach(function (file) {
+        if (path.extname(file) === ext) {
+          console.log(file)
+        }
+      })
+    })
+
+─────────────────────────────────────────────────────────────────────────────
+ あと7個のチャレンジが残っています。
+
+ メニューを表示するには 'learnyounode' と入力してください。
+
+─────────────────────────────────────────────────────────────────────────────
+
+  » この説明をもう一度表示する: learnyounode print
+  » 作成したアプリをテスト環境で実行する: learnyounode run program.js
+  » 作成したアプリが正しいか検証する: learnyounode verify program.js
+  » 出力結果が見づらい場合には --no-color をつけてみてください:
+    learnyounode verify program.js --no-color
+  » ヘルプを表示する: learnyounode help
+

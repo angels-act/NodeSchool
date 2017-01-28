@@ -1,0 +1,60 @@
+
+ # Node.jsを学んで豊かな人生を！
+
+ ## HTTP アッパーケース (13問中12問目)
+
+  POSTリクエストで渡される文字列を大文字に書き換えて返す HTTP サーバ
+  を書いてください。
+
+  サーバは、1つ目のコマンドライン引数で与えられたポートで 起動 します。
+
+ ─────────────────────────────────────────────────────────────────────────────
+
+ ## ヒント
+
+  request や response
+  オブジェクトを使う必要はありませんが、使えば楽になるでしょう。
+
+  npm には、 Stream
+  のデータを途中で書き換えるための色々なパッケージがあります。
+  この問題を解決するためには through2-map
+  というパッケージを使うのが最も簡単です。 through2-map
+  が提供する関数を使うと、簡単に新しい「transform
+  stream」が作成できます。Array#map() の Stream バーションと考えて良いです：
+
+     var map = require('through2-map')
+     inStream.pipe(map(function (chunk) {
+       return chunk.toString().split('').reverse().join('')
+     })).pipe(outStream)
+
+  上記の例では、 inStream のデータを使って文字列を逆順に並び替えて outStream
+  に書き出しています。
+  入っているチャンクサイズがコントロールできないのを忘れないでください。
+
+  through2-map
+  をインストールするために、以下のコマンドをコマンドラインに書いてください：
+
+     $ npm install through2-map
+
+  インターネットに接続できない場合は、 node_modules に
+  file:///Users/kmaru/.nvm/versions/node/v7.2.0/lib/node_modules/learnyounod
+  e/node_modules のフォルダのパッケージをコピーしてください。
+
+  file:///Users/kmaru/.nvm/versions/node/v7.2.0/lib/node_modules/learnyounod
+  e/node_modules/through2-map
+
+  through2-map モジュールのドキュメントは learnyounode
+  と一緒にインストールされているので、このリンクをブラウザで見てください:
+
+  file:///Users/kmaru/.nvm/versions/node/v7.2.0/lib/node_modules/learnyounod
+  e/docs/through2-map.html
+
+ ─────────────────────────────────────────────────────────────────────────────
+
+   » この説明をもう一度表示する: learnyounode print
+   » 作成したアプリをテスト環境で実行する: learnyounode run program.js
+   » 作成したアプリが正しいか検証する: learnyounode verify program.js
+   » 出力結果が見づらい場合には --no-color をつけてみてください:
+     learnyounode verify program.js --no-color
+   » ヘルプを表示する: learnyounode help
+

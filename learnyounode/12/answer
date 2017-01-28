@@ -1,0 +1,65 @@
+
+# Node.jsを学んで豊かな人生を！
+
+## HTTP アッパーケース (13問中12問目)
+
+
+あなたの回答の評価結果（想定回答との比較結果）:
+
+                回答内容                                想定回答
+────────────────────────────────────────────────────────────────────────────────
+
+   "KINDIE"                            ==    "KINDIE"
+   "BAIL UP"                           ==    "BAIL UP"
+   "SICKIE"                            ==    "SICKIE"
+   "BITZER"                            ==    "BITZER"
+   "POZZY"                             ==    "POZZY"
+   "CLACKER"                           ==    "CLACKER"
+   "SICKIE"                            ==    "SICKIE"
+   "BLUE"                              ==    "BLUE"
+   "OP SHOP"                           ==    "OP SHOP"
+   "MACCAS"                            ==    "MACCAS"
+   ""                                  ==    ""
+
+────────────────────────────────────────────────────────────────────────────────
+
+ ✓
+
+ 回答内容は想定回答とマッチしました
+
+ # おめでとう！ 「HTTP アッパーケース」に対するあなたの回答は合格です！
+
+ これが正式な回答です（もしあなたの回答と比較してみたいならどうぞ）：
+
+─────────────────────────────────────────────────────────────────────────────
+
+    var http = require('http')
+    var map = require('through2-map')
+
+    var server = http.createServer(function (req, res) {
+      if (req.method !== 'POST') {
+        return res.end('send me a POST\n')
+      }
+
+      req.pipe(map(function (chunk) {
+        return chunk.toString().toUpperCase()
+      })).pipe(res)
+    })
+
+    server.listen(Number(process.argv[2]))
+
+─────────────────────────────────────────────────────────────────────────────
+ 一つのチャレンジが残っています！
+
+ メニューを表示するには 'learnyounode' と入力してください。
+
+─────────────────────────────────────────────────────────────────────────────
+
+  » この説明をもう一度表示する: learnyounode print
+  » 作成したアプリをテスト環境で実行する: learnyounode run program.js
+  » 作成したアプリが正しいか検証する: learnyounode verify program.js
+  » 出力結果が見づらい場合には --no-color をつけてみてください:
+    learnyounode verify program.js --no-color
+  » ヘルプを表示する: learnyounode help
+
+

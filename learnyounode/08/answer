@@ -1,0 +1,63 @@
+
+# Node.jsを学んで豊かな人生を！
+
+## HTTP 集める (13問中8問目)
+
+
+あなたの回答の評価結果（想定回答との比較結果）:
+
+────────────────────────────────────────────────────────────────────────────────
+
+1.  回答内容:  "363"
+1.  想定回答:  "363"
+
+2.  回答内容:  "As dry as a thongs and get a dog up ya roo. You little ripper fremantle doctor flamin he's got a massive bush telly. Come a stonkered when get a dog up ya paddock. Come a coldie how flat out like a muster. As dry as a banana bender to get a dog up ya spewin'."
+2.  想定回答:  "As dry as a thongs and get a dog up ya roo. You little ripper fremantle doctor flamin he's got a massive bush telly. Come a stonkered when get a dog up ya paddock. Come a coldie how flat out like a muster. As dry as a banana bender to get a dog up ya spewin'."
+
+3.  回答内容:  "Lets get some g'day with as cross as a bog standard. She'll be right ute to as stands out like flanno. "
+3.  想定回答:  "Lets get some g'day with as cross as a bog standard. She'll be right ute to as stands out like flanno. "
+
+4.  回答内容:  ""
+4.  想定回答:  ""
+
+
+────────────────────────────────────────────────────────────────────────────────
+
+ ✓
+
+ 回答内容は想定回答とマッチしました
+
+ # おめでとう！ 「HTTP 集める」に対するあなたの回答は合格です！
+
+ これが正式な回答です（もしあなたの回答と比較してみたいならどうぞ）：
+
+─────────────────────────────────────────────────────────────────────────────
+
+    var http = require('http')
+    var bl = require('bl')
+
+    http.get(process.argv[2], function (response) {
+      response.pipe(bl(function (err, data) {
+        if (err) {
+          return console.error(err)
+        }
+        data = data.toString()
+        console.log(data.length)
+        console.log(data)
+      }))
+    })
+
+─────────────────────────────────────────────────────────────────────────────
+ あと5個のチャレンジが残っています。
+
+ メニューを表示するには 'learnyounode' と入力してください。
+
+─────────────────────────────────────────────────────────────────────────────
+
+  » この説明をもう一度表示する: learnyounode print
+  » 作成したアプリをテスト環境で実行する: learnyounode run program.js
+  » 作成したアプリが正しいか検証する: learnyounode verify program.js
+  » 出力結果が見づらい場合には --no-color をつけてみてください:
+    learnyounode verify program.js --no-color
+  » ヘルプを表示する: learnyounode help
+

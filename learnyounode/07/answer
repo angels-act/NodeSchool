@@ -1,0 +1,57 @@
+
+# Node.jsを学んで豊かな人生を！
+
+## HTTP クライアント (13問中7問目)
+
+
+あなたの回答の評価結果（想定回答との比較結果）:
+
+                回答内容                                想定回答
+────────────────────────────────────────────────────────────────────────────────
+
+   "Porky"                             ==    "Porky"
+   "Bunyip"                            ==    "Bunyip"
+   "Cook"                              ==    "Cook"
+   "Pint"                              ==    "Pint"
+   "Bonza"                             ==    "Bonza"
+   "Yabber"                            ==    "Yabber"
+   "Bitzer"                            ==    "Bitzer"
+   "Ciggies"                           ==    "Ciggies"
+   "Grundies"                          ==    "Grundies"
+   "Chrissie"                          ==    "Chrissie"
+   ""                                  ==    ""
+
+────────────────────────────────────────────────────────────────────────────────
+
+ ✓
+
+ 回答内容は想定回答とマッチしました
+
+ # おめでとう！ 「HTTP クライアント」に対するあなたの回答は合格です！
+
+ これが正式な回答です（もしあなたの回答と比較してみたいならどうぞ）：
+
+─────────────────────────────────────────────────────────────────────────────
+
+    var http = require('http')
+
+    http.get(process.argv[2], function (response) {
+      response.setEncoding('utf8')
+      response.on('data', console.log)
+      response.on('error', console.error)
+    }).on('error', console.error)
+
+─────────────────────────────────────────────────────────────────────────────
+ あと6個のチャレンジが残っています。
+
+ メニューを表示するには 'learnyounode' と入力してください。
+
+─────────────────────────────────────────────────────────────────────────────
+
+  » この説明をもう一度表示する: learnyounode print
+  » 作成したアプリをテスト環境で実行する: learnyounode run program.js
+  » 作成したアプリが正しいか検証する: learnyounode verify program.js
+  » 出力結果が見づらい場合には --no-color をつけてみてください:
+    learnyounode verify program.js --no-color
+  » ヘルプを表示する: learnyounode help
+

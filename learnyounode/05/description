@@ -1,0 +1,49 @@
+
+ # Node.jsを学んで豊かな人生を！
+
+ ## LSのフィルター (13問中5問目)
+
+  拡張子によってフィルタしたファイルリストをコンソールに出力するアプリを書い
+  てください。
+
+  コマンドライン引数の1つ目は、フォルダのパスです（例えば
+  /あなた/の/フォルダー/)。 2つ目は、フィルタする拡張子です。
+
+  例： 2つ目の引数が "txt" のときは、後ろに .txt
+  がついているファイルだけを表示しなければいけません。 メモ：2つ目の引数は
+  "." プレフィックスがありません。
+
+  コンソールにフィルタリングしたファイルのリストを出力してください。
+  1行につき1つのファイル名を出力します。 また、非同期I/O を使ってください。
+
+ ─────────────────────────────────────────────────────────────────────────────
+
+ ## ヒント
+
+  fs.readdir()
+  関数の1つ目の引数はディレクトリへのパスです。2つ目の引数はコールバック関数
+  です。 コールバック関数は以下のようになります：
+
+     function callback (err, list) { /* ... */ }
+
+  list はファイル名の String が格納された Array です。
+
+  fs モジュールのドキュメントは、このリンクをブラウザで見てください:
+  file:///Users/kmaru/.nvm/versions/node/v7.2.0/lib/node_modules/learnyounod
+  e/node_apidoc/fs.html
+
+  Node の path も役に立つかもしれません。特に extname の関数が使えます。
+
+  path モジュールのドキュメントはこのリンクをブラウザで見てください:
+  file:///Users/kmaru/.nvm/versions/node/v7.2.0/lib/node_modules/learnyounod
+  e/node_apidoc/path.html
+
+ ─────────────────────────────────────────────────────────────────────────────
+
+   » この説明をもう一度表示する: learnyounode print
+   » 作成したアプリをテスト環境で実行する: learnyounode run program.js
+   » 作成したアプリが正しいか検証する: learnyounode verify program.js
+   » 出力結果が見づらい場合には --no-color をつけてみてください:
+     learnyounode verify program.js --no-color
+   » ヘルプを表示する: learnyounode help
+

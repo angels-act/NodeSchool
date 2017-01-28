@@ -1,0 +1,54 @@
+
+# Node.jsを学んで豊かな人生を！
+
+## HTTP ファイルサーバ (13問中11問目)
+
+
+あなたの回答の評価結果（想定回答との比較結果）:
+
+────────────────────────────────────────────────────────────────────────────────
+
+1.  回答内容:  "She'll be right roadie also built like a bounce. Trent from punchy butcher piece of piss as stands out like stickybeak. Gutful of good oil mate she'll be right swagger."
+1.  想定回答:  "She'll be right roadie also built like a bounce. Trent from punchy butcher piece of piss as stands out like stickybeak. Gutful of good oil mate she'll be right swagger."
+
+2.  回答内容:  ""
+2.  想定回答:  ""
+
+
+────────────────────────────────────────────────────────────────────────────────
+
+ ✓
+
+ 回答内容は想定回答とマッチしました
+
+ # おめでとう！ 「HTTP ファイルサーバ」に対するあなたの回答は合格です！
+
+ これが正式な回答です（もしあなたの回答と比較してみたいならどうぞ）：
+
+─────────────────────────────────────────────────────────────────────────────
+
+    var http = require('http')
+    var fs = require('fs')
+
+    var server = http.createServer(function (req, res) {
+      res.writeHead(200, { 'content-type': 'text/plain' })
+
+      fs.createReadStream(process.argv[3]).pipe(res)
+    })
+
+    server.listen(Number(process.argv[2]))
+
+─────────────────────────────────────────────────────────────────────────────
+ あと2個のチャレンジが残っています。
+
+ メニューを表示するには 'learnyounode' と入力してください。
+
+─────────────────────────────────────────────────────────────────────────────
+
+  » この説明をもう一度表示する: learnyounode print
+  » 作成したアプリをテスト環境で実行する: learnyounode run program.js
+  » 作成したアプリが正しいか検証する: learnyounode verify program.js
+  » 出力結果が見づらい場合には --no-color をつけてみてください:
+    learnyounode verify program.js --no-color
+  » ヘルプを表示する: learnyounode help
+

@@ -1,0 +1,81 @@
+
+# Node.jsを学んで豊かな人生を！
+
+## ASYNCジャグリング (13問中9問目)
+
+
+あなたの回答の評価結果（想定回答との比較結果）:
+
+────────────────────────────────────────────────────────────────────────────────
+
+1.  回答内容:  "She'll be right big smoke heaps get a dog up ya fisho. As cunning as a gyno no dramas watch out for the pint. Lets get some spit the dummy how watch out for the freckle. As cross as a stonkered with grab us a no-hoper. "
+1.  想定回答:  "She'll be right big smoke heaps get a dog up ya fisho. As cunning as a gyno no dramas watch out for the pint. Lets get some spit the dummy how watch out for the freckle. As cross as a stonkered with grab us a no-hoper. "
+
+2.  回答内容:  "Watch out for the tucker-bag and he's got a massive bodgy. She'll be right jumbuck when he hasn't got a show pony. Trent from punchy ironman mate as cross as a aussie salute. As busy as a blue where as cross as a prezzy. "
+2.  想定回答:  "Watch out for the tucker-bag and he's got a massive bodgy. She'll be right jumbuck when he hasn't got a show pony. Trent from punchy ironman mate as cross as a aussie salute. As busy as a blue where as cross as a prezzy. "
+
+3.  回答内容:  "Grab us a pot when we're going fly wire. Built like a billy piece of piss as dry as a christmas. As busy as a mongrel bloody watch out for the oldies. "
+3.  想定回答:  "Grab us a pot when we're going fly wire. Built like a billy piece of piss as dry as a christmas. As busy as a mongrel bloody watch out for the oldies. "
+
+4.  回答内容:  ""
+4.  想定回答:  ""
+
+
+────────────────────────────────────────────────────────────────────────────────
+
+ ✓
+
+ 回答内容は想定回答とマッチしました
+
+ # おめでとう！ 「ASYNCジャグリング」に対するあなたの回答は合格です！
+
+ これが正式な回答です（もしあなたの回答と比較してみたいならどうぞ）：
+
+─────────────────────────────────────────────────────────────────────────────
+
+    var http = require('http')
+    var bl = require('bl')
+    var results = []
+    var count = 0
+
+    function printResults () {
+      for (var i = 0; i < 3; i++) {
+        console.log(results[i])
+      }
+    }
+
+    function httpGet (index) {
+      http.get(process.argv[2 + index], function (response) {
+        response.pipe(bl(function (err, data) {
+          if (err) {
+            return console.error(err)
+          }
+
+          results[index] = data.toString()
+          count++
+
+          if (count === 3) {
+            printResults()
+          }
+        }))
+      })
+    }
+
+    for (var i = 0; i < 3; i++) {
+      httpGet(i)
+    }
+
+─────────────────────────────────────────────────────────────────────────────
+ あと3個のチャレンジが残っています。
+
+ メニューを表示するには 'learnyounode' と入力してください。
+
+─────────────────────────────────────────────────────────────────────────────
+
+  » この説明をもう一度表示する: learnyounode print
+  » 作成したアプリをテスト環境で実行する: learnyounode run program.js
+  » 作成したアプリが正しいか検証する: learnyounode verify program.js
+  » 出力結果が見づらい場合には --no-color をつけてみてください:
+    learnyounode verify program.js --no-color
+  » ヘルプを表示する: learnyounode help
+

@@ -1,0 +1,59 @@
+
+ # Node.jsを学んで豊かな人生を！
+
+ ## 初めてのI/O！ (13問中3問目)
+
+  同期処理
+  をするファイルシステムの関数を使ってファイルの改行文字(\n)の数を出力するア
+  プリを書いてください。 cat file | wc -l と同じようなアプリです。
+
+  アプリの1つ目のコマンドライン引数は、そのファイルへのパスです。テスト用の
+  ファイルを作る必要はありません。
+
+ ─────────────────────────────────────────────────────────────────────────────
+
+ ## ヒント
+
+  ファイルシステムにアクセスするためにはNodeのコアライブラリの fs
+  モジュールが必要となります。 モジュールをロードするには以下のようにします:
+
+     var fs = require('fs')
+
+  その後は fs という変数で fs というモジュールを利用出来ます。
+
+  同期処理(ブロッキング)をする関数は、名前の後ろに Sync
+  がついています。ファイルを読むためには
+  fs.readFileSync('/あなた/の/ファイル') を使ってください。 この関数は
+  Buffer オブジェクトを返します。この Buffer
+  を使うことで全てのファイルコンテンツにアクセスできます。
+
+  fs モジュールのドキュメントは以下のリンクをブラウザでご覧ください:
+  file:///Users/kmaru/.nvm/versions/node/v7.2.0/lib/node_modules/learnyounod
+  e/node_apidoc/fs.html
+
+  Buffer オブジェクトは、ASCIIやバイナリ、その他のフォーマットを扱う際の
+  Nodeの効率的な方法です。エンコーディングは関係ありません。 Buffer
+  のオブジェクトは toString() をつかって String に変換できます。
+
+  例えば var str = buf.toString().
+
+  Buffer モジュールのドキュメントは、このリンクをブラウザで見てください:
+  file:///Users/kmaru/.nvm/versions/node/v7.2.0/lib/node_modules/learnyounod
+  e/node_apidoc/buffer.html
+
+  簡単に改行を数える方法を探しているのなら、このヒントは役に立つでしょう：
+
+  JavaScriptの String は .split() 関数を使って分割出来ます。\n
+  を区切り文字として使えば String を1行ずつに分割した Array
+  を受け取ることが出来ます。
+  ただし、ファイルの最後の改行には気をつけてください。
+
+ ─────────────────────────────────────────────────────────────────────────────
+
+   » この説明をもう一度表示する: learnyounode print
+   » 作成したアプリをテスト環境で実行する: learnyounode run program.js
+   » 作成したアプリが正しいか検証する: learnyounode verify program.js
+   » 出力結果が見づらい場合には --no-color をつけてみてください:
+     learnyounode verify program.js --no-color
+   » ヘルプを表示する: learnyounode help
+
