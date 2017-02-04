@@ -1,0 +1,41 @@
+
+ # JAVASCRIPTING
+
+ ## 数値を文字列に (19問中8問目)
+
+  数値を文字列に変換したいことがあります。
+
+  そういう時は toString() メソッドを使います。たとえば...
+
+     var n = 256;
+     n = n.toString();
+
+ ## やってみよう
+
+  number-to-string.js ファイルを作りましょう。
+
+  ファイルの中で、数値 128 を表す変数 n を定義しましょう。
+
+  変数 n の toString() メソッドを呼びましょう。
+
+  console.log() を使い、toString()
+  メソッドの結果をターミナルに表示しましょう。
+
+  次のコマンドを実行し、あなたのプログラムが正しく動くか確認しましょう。
+
+     javascripting verify number-to-string.js
+
+ ─────────────────────────────────────────────────────────────────────────────
+  ヘルプが必要ですか？? このワークショップのREADMEを読んでください。 :
+  [http://github.com/ledsun/javascripting](http://github.com/ledsun/javascri
+  pting)
+
+ ─────────────────────────────────────────────────────────────────────────────
+
+   » この説明をもう一度表示する: javascripting print
+   » 作成したアプリをテスト環境で実行する: javascripting run program.js
+   » 作成したアプリが正しいか検証する: javascripting verify program.js
+   » 出力結果が見づらい場合には --no-color をつけてみてください:
+     javascripting verify program.js --no-color
+   » ヘルプを表示する: javascripting help
+

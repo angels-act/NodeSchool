@@ -1,0 +1,57 @@
+
+ ## 配列のフィルター (19問中12問目)
+
+  配列にはいろいろな操作方法があります。
+
+  よくやる処理に、配列にフィルターをかけて、特定の値を取り出す。というものが
+  あります。
+
+  フィルターをかけるには、 .filter() メソッドを使います。
+
+  たとえば...
+
+     var pets = ['cat', 'dog', 'elephant'];
+
+     var filtered = pets.filter(function (pet) {
+       return (pet !== 'elephant');
+     });
+
+  フィルターした 配列の中には cat と dog だけが残ります。
+
+ ## やってみよう
+
+  array-filtering.js ファイルを作りましょう。
+
+  ファイルの中で、 次の配列を表す、変数 numbers を定義しましょう。
+
+     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  同様に、 numbers.filter() の実行結果を表す、変数 filtered
+  を定義しましょう。
+
+  .filter() メソッドに渡す関数は、このような感じになるでしょう...
+
+     function evenNumbers (number) {
+       return number % 2 === 0;
+     }
+
+  console.log() を使って、 フィルターした 配列をターミナルに表示しましょう。
+
+  次のコマンドを実行し、あなたのプログラムが正しく動くか確認しましょう。
+
+     javascripting verify array-filtering.js
+
+ ─────────────────────────────────────────────────────────────────────────────
+  ヘルプが必要ですか？? このワークショップのREADMEを読んでください。 :
+  [http://github.com/ledsun/javascripting](http://github.com/ledsun/javascri
+  pting)
+
+ ─────────────────────────────────────────────────────────────────────────────
+
+   » この説明をもう一度表示する: javascripting print
+   » 作成したアプリをテスト環境で実行する: javascripting run program.js
+   » 作成したアプリが正しいか検証する: javascripting verify program.js
+   » 出力結果が見づらい場合には --no-color をつけてみてください:
+     javascripting verify program.js --no-color
+   » ヘルプを表示する: javascripting help
+

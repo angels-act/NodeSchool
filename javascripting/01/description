@@ -1,0 +1,44 @@
+
+ # JAVASCRIPTING
+
+ ## はじめの一歩 (19問中1問目)
+
+  このワークショップで使うディレクトリを作りましょう。
+
+  次のコマンドを実行して、javascripting ディレクトリを作ります。
+
+     mkdir javascripting
+
+  javascripting ディレクトリに移動しましょう。
+
+     cd javascripting
+
+  次のコマンドで introduction.js ファイルを作成します。
+
+     touch introduction.js
+
+  (Windowsを使っているのであれば type NUL > introduction.js)
+
+  お好みのエディタでファイルを開きます。次の文を書き足しましょう。
+
+     console.log('hello');
+
+  ファイルを保存します。次のコマンドを実行し、あなたのプログラムが正しく動く
+  か確認しましょう。
+
+     javascripting verify introduction.js
+
+ ─────────────────────────────────────────────────────────────────────────────
+  ヘルプが必要ですか？? このワークショップのREADMEを読んでください。 :
+  [http://github.com/ledsun/javascripting](http://github.com/ledsun/javascri
+  pting)
+
+ ─────────────────────────────────────────────────────────────────────────────
+
+   » この説明をもう一度表示する: javascripting print
+   » 作成したアプリをテスト環境で実行する: javascripting run program.js
+   » 作成したアプリが正しいか検証する: javascripting verify program.js
+   » 出力結果が見づらい場合には --no-color をつけてみてください:
+     javascripting verify program.js --no-color
+   » ヘルプを表示する: javascripting help
+

@@ -1,0 +1,55 @@
+
+ # JAVASCRIPTING
+
+ ## 関数の引数 (19問中18問目)
+
+  関数の引数はいくつでも宣言できます。引数はどんな型でも大丈夫です。文字列、
+  数値、配列、オブジェクト、関数さえも引数になり得ます。
+
+  たとえば...
+
+     function example (firstArg, secondArg) {
+       console.log(firstArg, secondArg);
+     }
+
+  引数が2つの関数を呼び出すには、次のようにします。
+
+     example('hello', 'world');
+
+  上の例を実行すると、ターミナルに hello world と出力されるでしょう。
+
+ ## やってみよう
+
+  function-arguments.js ファイルを作りましょう。
+
+  ファイルの中で、関数 math を定義します。引数は三つです。
+
+  重要なことがあります。引数名は引数の値を参照するためだけに使います。引数名
+  は好きに決めてかまいません。
+
+  math
+  関数は、2番目と3番目の引数を掛け、その結果に1番目の引数を足します。そうし
+  て得られた値を返してください。
+
+  その後、 console.log() の括弧の内側で、 math()
+  関数を呼びます。1番目の引数に数値 53 を、2番目に 61 を、3番目に 67
+  を指定してください。
+
+  次のコマンドを実行し、あなたのプログラムが正しく動くか確認しましょう。
+
+     javascripting verify function-arguments.js
+
+ ─────────────────────────────────────────────────────────────────────────────
+  ヘルプが必要ですか？? このワークショップのREADMEを読んでください。 :
+  [http://github.com/ledsun/javascripting](http://github.com/ledsun/javascri
+  pting)
+
+ ─────────────────────────────────────────────────────────────────────────────
+
+   » この説明をもう一度表示する: javascripting print
+   » 作成したアプリをテスト環境で実行する: javascripting run program.js
+   » 作成したアプリが正しいか検証する: javascripting verify program.js
+   » 出力結果が見づらい場合には --no-color をつけてみてください:
+     javascripting verify program.js --no-color
+   » ヘルプを表示する: javascripting help
+

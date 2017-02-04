@@ -1,0 +1,44 @@
+
+ # JAVASCRIPTING
+
+ ## 文字列 (19問中3問目)
+
+  文字列は引用符でくくった値です。
+
+  引用符は一重引用符と二重引用符のどちらも使えます。例えば...
+
+     'this is a string'
+
+     "this is also a string"
+
+  どちらかの引用符を使うルールを決め、守りましょう。
+  このワークショップでは一重引用符だけを使います。
+
+ ## やってみよう
+
+  strings.js ファイルを作りましょう。
+
+  ファイルの中で、次のように変数 someString を作りましょう。
+
+     var someString = 'this is a string';
+
+  console.log を使い、変数 someStirng をターミナルに表示しましょう。
+
+  次のコマンドを実行し、あなたのプログラムが正しく動くか確認しましょう。
+
+  javascripting verify strings.js
+
+ ─────────────────────────────────────────────────────────────────────────────
+  ヘルプが必要ですか？? このワークショップのREADMEを読んでください。 :
+  [http://github.com/ledsun/javascripting](http://github.com/ledsun/javascri
+  pting)
+
+ ─────────────────────────────────────────────────────────────────────────────
+
+   » この説明をもう一度表示する: javascripting print
+   » 作成したアプリをテスト環境で実行する: javascripting run program.js
+   » 作成したアプリが正しいか検証する: javascripting verify program.js
+   » 出力結果が見づらい場合には --no-color をつけてみてください:
+     javascripting verify program.js --no-color
+   » ヘルプを表示する: javascripting help
+
