@@ -1,0 +1,23 @@
+input:      [ 0, 3, 4, 8, 3 ]
+submission: [ 0, 6, 8, 16, 6 ]
+solution:   [ 0, 6, 8, 16, 6 ]
+✓ Yay!  You used Array#map
+
+# PASS
+
+Your solution to Basic: Map passed!
+
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+    module.exports = function doubleAll(numbers) {
+      return numbers.map(function double(num) {
+        return num * 2
+      })
+    }
+
+────────────────────────────────────────────────────────────────────────────────
+
+You have 14 challenges left.
+Type 'functional-javascript' to show the menu.
+

@@ -1,0 +1,27 @@
+$ functional-javascript verify reduce.js    
+input:      [ 'et', 'incididunt', 'enim', 'deserunt', 'duis', 'cupidatat', 'nostrud', 'dolor', 'amet', 'qui', 'do', 'labore', 'anim', 'quis', 'deserunt', 'labore', 'tempor', 'tempor', 'laboris', 'nostrud', 'sint', 'dolore', 'laborum', 'amet', 'ex', 'ad', 'mollit', 'velit', 'eiusmod', 'sint', 'minim', 'consectetur', 'aliqua', 'esse', 'exercitation', 'non', 'reprehenderit', 'consequat', 'aliqua', 'duis', 'nisi', 'lorem', 'dolor', 'ullamco', 'laboris', 'esse', 'tempor', 'commodo', 'laboris', 'fugiat', 'nisi', 'irure', 'ullamco', 'sit', 'nulla', 'occaecat', 'eiusmod', 'nostrud', 'eiusmod', 'esse', 'reprehenderit', 'pariatur', 'enim', 'laborum', 'fugiat', 'sit', 'do', 'voluptate', 'elit', 'dolor', 'est', 'consequat', 'sunt', 'velit', 'irure', 'minim', 'exercitation', 'sit', 'mollit', 'deserunt' ]
+submission: { et: 1, incididunt: 1, enim: 2, deserunt: 3, duis: 2, cupidatat: 1, nostrud: 3, dolor: 3, amet: 2, qui: 1, do: 2, labore: 2, anim: 1, quis: 1, tempor: 3, laboris: 3, sint: 2, dolore: 1, laborum: 2, ex: 1, ad: 1, mollit: 2, velit: 2, eiusmod: 3, minim: 2, consectetur: 1, aliqua: 2, esse: 3, exercitation: 2, non: 1, reprehenderit: 2, consequat: 2, nisi: 2, lorem: 1, ullamco: 2, commodo: 1, fugiat: 2, irure: 2, sit: 3, nulla: 1, occaecat: 1, pariatur: 1, voluptate: 1, elit: 1, est: 1, sunt: 1 }
+solution:   { et: 1, incididunt: 1, enim: 2, deserunt: 3, duis: 2, cupidatat: 1, nostrud: 3, dolor: 3, amet: 2, qui: 1, do: 2, labore: 2, anim: 1, quis: 1, tempor: 3, laboris: 3, sint: 2, dolore: 1, laborum: 2, ex: 1, ad: 1, mollit: 2, velit: 2, eiusmod: 3, minim: 2, consectetur: 1, aliqua: 2, esse: 3, exercitation: 2, non: 1, reprehenderit: 2, consequat: 2, nisi: 2, lorem: 1, ullamco: 2, commodo: 1, fugiat: 2, irure: 2, sit: 3, nulla: 1, occaecat: 1, pariatur: 1, voluptate: 1, elit: 1, est: 1, sunt: 1 }
+
+# PASS
+
+Your solution to Basic: Recursion passed!
+
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+function reduce(arr, fn, initial) {
+    return (function reduceOne(index, value) {
+            if (index > arr.length - 1) return value // end condition
+            return reduceOne(index + 1, fn(value, arr[index], index, arr)) // calculate & pass values to next step
+            })(0, initial) // IIFE. kick off recursion with initial values
+}
+
+module.exports = reduce
+
+────────────────────────────────────────────────────────────────────────────────
+
+You have 11 challenges left.
+Type 'functional-javascript' to show the menu.
+
+

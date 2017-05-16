@@ -1,0 +1,25 @@
+$ functional-javascript verify countWords.js 
+input:      [ 'sit', 'cillum', 'ut', 'nulla', 'do', 'quis', 'eiusmod', 'occaecat', 'ullamco', 'fugiat', 'occaecat', 'minim', 'mollit', 'magna', 'amet', 'ipsum', 'eu', 'culpa', 'officia', 'ullamco', 'et', 'ullamco', 'mollit', 'consectetur', 'ea', 'cillum', 'lorem', 'voluptate', 'laborum', 'proident', 'ex', 'irure', 'anim', 'id', 'est', 'deserunt', 'sit', 'fugiat', 'magna', 'ad', 'tempor' ]
+submission: { sit: 2, cillum: 2, ut: 1, nulla: 1, do: 1, quis: 1, eiusmod: 1, occaecat: 2, ullamco: 3, fugiat: 2, minim: 1, mollit: 2, magna: 2, amet: 1, ipsum: 1, eu: 1, culpa: 1, officia: 1, et: 1, consectetur: 1, ea: 1, lorem: 1, voluptate: 1, laborum: 1, proident: 1, ex: 1, irure: 1, anim: 1, id: 1, est: 1, deserunt: 1, ad: 1, tempor: 1 }
+solution:   { sit: 2, cillum: 2, ut: 1, nulla: 1, do: 1, quis: 1, eiusmod: 1, occaecat: 2, ullamco: 3, fugiat: 2, minim: 1, mollit: 2, magna: 2, amet: 1, ipsum: 1, eu: 1, culpa: 1, officia: 1, et: 1, consectetur: 1, ea: 1, lorem: 1, voluptate: 1, laborum: 1, proident: 1, ex: 1, irure: 1, anim: 1, id: 1, est: 1, deserunt: 1, ad: 1, tempor: 1 }
+
+# PASS
+
+Your solution to Basic: Reduce passed!
+
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+function countWords(arr) {
+    return arr.reduce(function(countMap, word) {
+            countMap[word] = ++countMap[word] || 1 // increment or initialize to 1
+            return countMap
+    }, {}) // second argument to reduce initialises countMap to {}
+}
+
+module.exports = countWords
+
+────────────────────────────────────────────────────────────────────────────────
+
+You have 12 challenges left.
+Type 'functional-javascript' to show the menu.

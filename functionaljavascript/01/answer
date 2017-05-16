@@ -1,0 +1,19 @@
+input:      'Eiusmod incididunt deserunt magna non est sunt excepteur adipisicing ipsum irure.'
+submission: 'EIUSMOD INCIDIDUNT DESERUNT MAGNA NON EST SUNT EXCEPTEUR ADIPISICING IPSUM IRURE.'
+solution:   'EIUSMOD INCIDIDUNT DESERUNT MAGNA NON EST SUNT EXCEPTEUR ADIPISICING IPSUM IRURE.'
+
+# PASS
+
+Your solution to Hello World passed!
+
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+    module.exports = function(input) {
+      return input.toUpperCase()
+    }
+
+────────────────────────────────────────────────────────────────────────────────
+
+You have 17 challenges left.
+Type 'functional-javascript' to show the menu.

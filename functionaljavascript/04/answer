@@ -1,0 +1,23 @@
+submission: [ 'Et ad ullamco sit est commodo labore.', 'Occaecat officia est labore dolor cupidatat.', 'Et in ipsum ea commodo cupidatat nostrud.', 'Nulla consectetur ipsum enim amet commodo eu.', 'Reprehenderit id do mollit ullamco.', 'Ullamco in laborum incididunt tempor irure.' ]
+solution:   [ 'Et ad ullamco sit est commodo labore.', 'Occaecat officia est labore dolor cupidatat.', 'Et in ipsum ea commodo cupidatat nostrud.', 'Nulla consectetur ipsum enim amet commodo eu.', 'Reprehenderit id do mollit ullamco.', 'Ullamco in laborum incididunt tempor irure.' ]
+
+# PASS
+
+Your solution to Basic: Filter passed!
+
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+    module.exports = function getShortMessages(messages) {
+      return messages.filter(function(item) {
+        return item.message.length < 50
+      }).map(function(item) {
+        return item.message
+      })
+    }
+
+────────────────────────────────────────────────────────────────────────────────
+
+You have 14 challenges left.
+Type 'functional-javascript' to show the menu.
+

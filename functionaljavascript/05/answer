@@ -1,0 +1,25 @@
+submission: 'found 8 good lists!'
+solution:   'found 8 good lists!'
+
+# PASS
+
+Your solution to Basic: Every Some passed!
+
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+    module.exports = function checkUsersValid(goodUsers) {
+      return function allUsersValid(submittedUsers) {
+        return submittedUsers.every(function(submittedUser) {
+          return goodUsers.some(function(goodUser) {
+            return goodUser.id === submittedUser.id
+          })
+        })
+      }
+    }
+
+────────────────────────────────────────────────────────────────────────────────
+
+You have 13 challenges left.
+Type 'functional-javascript' to show the menu.
+
